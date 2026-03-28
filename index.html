@@ -17,9 +17,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;min-height:1
 
 /* orbs */
 .orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;animation:orbMove linear infinite}
-.orb1{width:600px;height:600px;background:radial-gradient(circle,rgba(99,102,241,.22),transparent 70%);top:-200px;left:-150px;animation-duration:22s}
-.orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(236,72,153,.15),transparent 70%);bottom:-120px;right:-120px;animation-duration:28s;animation-delay:-12s}
-.orb3{width:360px;height:360px;background:radial-gradient(circle,rgba(6,182,212,.12),transparent 70%);top:40%;left:40%;animation-duration:20s;animation-delay:-7s}
+.orb1{width:600px;height:600px;background:radial-gradient(circle,rgba(56,189,248,.2),transparent 70%);top:-200px;left:-150px;animation-duration:22s}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.14),transparent 70%);bottom:-120px;right:-120px;animation-duration:28s;animation-delay:-12s}
+.orb3{width:360px;height:360px;background:radial-gradient(circle,rgba(125,211,252,.1),transparent 70%);top:40%;left:40%;animation-duration:20s;animation-delay:-7s}
 @keyframes orbMove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(40px,-50px) scale(1.07)}50%{transform:translate(-30px,35px) scale(.93)}75%{transform:translate(50px,25px) scale(1.1)}}
 
 /* nav */
@@ -30,7 +30,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;min-height:1
 .nav-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;letter-spacing:2px}
 .nav-sub{font-size:9px;letter-spacing:4px;color:var(--muted);text-transform:uppercase;margin-top:1px}
 .nav-clock-wrap{text-align:center}
-.nav-clock{font-family:'Space Mono',monospace;font-size:24px;font-weight:700;background:linear-gradient(90deg,#a5b4fc,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
+.nav-clock{font-family:'Space Mono',monospace;font-size:24px;font-weight:700;background:linear-gradient(90deg,#7dd3fc,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
 .nav-date{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;margin-top:3px}
 .logout-btn{padding:9px 20px;border:1px solid var(--border2);background:var(--surface);border-radius:8px;color:var(--muted2);font-family:'Inter',sans-serif;font-size:11px;font-weight:600;cursor:pointer;letter-spacing:2px;text-transform:uppercase;transition:all .2s}
 .logout-btn:hover{border-color:rgba(248,113,113,.4);color:var(--red)}
@@ -42,7 +42,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;min-height:1
 /* ── HOME ── */
 .home-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:76vh;gap:20px}
 .home-title{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;letter-spacing:2px;text-align:center;line-height:1}
-.home-title span{background:linear-gradient(90deg,#fbbf24,#f0abfc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.home-title span{background:linear-gradient(90deg,#38bdf8,#7dd3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .shift-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;max-width:840px}
 .shift-card{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px 24px;cursor:pointer;transition:all .35s cubic-bezier(.22,1,.36,1)}
 .shift-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .35s}
@@ -62,8 +62,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;min-height:1
 .shift-card:hover .s-line{width:48px}
 .shift-card.day .s-line{background:var(--green)}.shift-card.main .s-line{background:var(--yellow)}.shift-card.night .s-line{background:var(--blue)}
 .s-count{font-size:11px;color:var(--muted)}
-.schedule-btn{width:100%;max-width:840px;padding:16px;border:1px solid var(--border2);background:var(--surface);border-radius:14px;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--purple);text-transform:uppercase;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:10px}
-.schedule-btn:hover{border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.06);transform:translateY(-2px)}
+.schedule-btn{width:100%;max-width:840px;padding:16px;border:1px solid rgba(56,189,248,.2);background:var(--surface);border-radius:14px;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:#38bdf8;text-transform:uppercase;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:10px}
+.schedule-btn:hover{border-color:rgba(56,189,248,.4);background:rgba(56,189,248,.06);transform:translateY(-2px)}
 
 /* ── SHIFT PAGE ── */
 .shift-header{display:flex;align-items:center;gap:16px;margin-bottom:32px}
@@ -217,7 +217,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;min-height:1
 
 <nav class="nav">
   <div class="nav-brand">
-    <img src="ufix_logo.png?v=2" alt="UFIX" style="height:48px;filter:hue-rotate(200deg) saturate(1.8) brightness(1.15) drop-shadow(0 0 12px rgba(99,102,241,.8))" onerror="this.style.display='none'">
+    <img src="ufix_logo.png?v=2" alt="UFIX" style="height:48px;filter:hue-rotate(160deg) saturate(2) brightness(1.2) drop-shadow(0 0 14px rgba(56,189,248,.9))" onerror="this.style.display='none'">
     <div>
       <div class="nav-title">UFIX HR</div>
       <div class="nav-sub">Attendance</div>
