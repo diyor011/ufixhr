@@ -108,6 +108,16 @@ SHIFT_LABELS = {"08:00":"Day: 08:00-16:00","16:00":"Main: 16:00-00:00","00:00":"
 
 # ── API ───────────────────────────────────────────────────────────────────────
 
+@app.route("/today")
+def today_status():
+    """Returns active check-ins (no checkout yet) keyed by employee_id."""
+    conn = get_db()
+    rows = conn.execute(
+        "SELECT employee_id, checkin, late FROM attendance WHERE checkout IS NULL"
+    ).fetchall()
+    conn.close()
+    return jsonify({r["employee_id"]: {"checkin": r["checkin"], "late": r["late"]} for r in rows})
+
 @app.route("/employees")
 def get_employees():
     conn = get_db()
